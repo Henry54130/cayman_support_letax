@@ -1,24 +1,21 @@
 <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
 {% include head-custom-google-analytics.html %}
 
 <!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" /> -->
 
-<!-- end custom head snippets -->
 <script type="text/javascript">
-MathJax = {
+window.MathJax = {
   tex: {
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     displayMath: [['$$','$$'], ['\\[','\\]']]
   },
   options: {
-    ignoreHtmlClass: '.*|',
-    processHtmlClass: 'arithmatex'
+    // 不自動忽略任何 HTML class（若你想只處理帶 arithmatex 的元素，可改回原設定）
+    // ignoreHtmlClass: '.*|',
+    // processHtmlClass: 'arithmatex'
   }
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-
+<!-- end custom head snippets -->
